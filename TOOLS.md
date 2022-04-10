@@ -1,3 +1,17 @@
+# Text Compiler: `pandoc`
+
+To convert from Markdown to our various outputs, we use
+[`pandoc`](https://pandoc.org/). Several scripts in this repository will
+create the proper command-line arguments to this tool.
+
+## macOS
+
+To install `pandoc` on macOS, first install [Homebrew](https://brew.sh/)
+and then run:
+
+```
+brew install pandoc
+```
 
 # Editor: Visual Studio Code (VS Code)
 
