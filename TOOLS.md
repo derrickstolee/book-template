@@ -1,3 +1,11 @@
+# Preliminary tools
+
+## macOS
+
+Many of the installation instructions below require
+[Homebrew](https://brew.sh/), so install that before doing any other
+steps.
+
 # Text Compiler: `pandoc`
 
 To convert from Markdown to our various outputs, we use
@@ -6,11 +14,22 @@ create the proper command-line arguments to this tool.
 
 ## macOS
 
-To install `pandoc` on macOS, first install [Homebrew](https://brew.sh/)
-and then run:
+To install `pandoc` on macOS, run:
 
 ```
 brew install pandoc
+```
+
+# Typesetting tool: `pdflatex`
+
+Then building the PDF version of the book, you will need `pdflatex`.
+
+## macOS
+
+Install `pdflatex` by running:
+
+```
+brew install basictex
 ```
 
 # Editor: Visual Studio Code (VS Code)

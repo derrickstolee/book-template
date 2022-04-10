@@ -1,1 +1,4 @@
 .DS_Store
+
+# Ignore the generated files in the output/ directory
+/output/
