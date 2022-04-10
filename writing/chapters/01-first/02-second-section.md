@@ -1,4 +1,4 @@
-# The second section
+## The second section
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Amet justo donec enim
@@ -28,3 +28,4 @@ Blandit massa enim nec dui nunc mattis enim. Aliquam nulla facilisi cras
 fermentum odio eu feugiat pretium. Duis ut diam quam nulla porttitor
 massa. Dolor sit amet consectetur adipiscing elit. Fringilla est
 ullamcorper eget nulla facilisi.
+
