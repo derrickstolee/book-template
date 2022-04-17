@@ -1,15 +1,16 @@
-name: build-book
-on: [push]
+name: Build Book
+on: [push, pull_request]
 jobs:
   create-pdf:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - run: |
-          brew update --preinstall
           brew install pandoc
+      - run: |
           brew install basictex
           eval "$(/usr/libexec/path_helper)"
+      - run: |
           make
       - uses: actions/upload-artifact@v3
         with:
