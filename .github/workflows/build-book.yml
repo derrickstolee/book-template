@@ -1,0 +1,22 @@
+name: build-book
+on: [push]
+jobs:
+  create-pdf:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          brew update --preinstall
+          brew install pandoc
+          brew install basictex
+          eval "$(/usr/libexec/path_helper)"
+          make
+      - uses: actions/upload-artifact@v3
+        with:
+          name: pdf
+          path: output/book.pdf
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ebook
+          path: output/book.epub
+

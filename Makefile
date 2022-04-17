@@ -24,13 +24,13 @@ DEPENDENCIES=$(FIGURES) $(MARKDOWN) Makefile
 
 all:: phony output/book.epub output/book.pdf
 
-output/%.pdf: $(DEPENDENCIES) | output
+output/%.pdf: $(DEPENDENCIES) output
 	pandoc $(MARKDOWN) -o $@ $(PANDOCFLAGS)
 
-output/%.epub: $(DEPENDENCIES) | output
+output/%.epub: $(DEPENDENCIES) output
 	pandoc $(MARKDOWN) -o $@ $(PANDOCFLAGS)
 
-output/%.txt: $(DEPENDENCIES) | output
+output/%.txt: $(DEPENDENCIES) output
 	pandoc $(MARKDOWN) -o $@ $(PANDOCFLAGS)
 
 open-pdf: output/book.pdf  $(DEPENDENCIES)
