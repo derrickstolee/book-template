@@ -20,6 +20,14 @@ To install `pandoc` on macOS, run:
 brew install pandoc
 ```
 
+## Ubuntu
+
+To install `pandoc` on Ubuntu, run:
+
+```
+sudo apt install pandoc
+```
+
 # Typesetting tool: `pdflatex`
 
 Then building the PDF version of the book, you will need `pdflatex`.
@@ -30,6 +38,17 @@ Install `pdflatex` by running:
 
 ```
 brew install basictex
+```
+
+## Ubuntu
+
+To install `pdflatex` on Ubuntu, run:
+
+```
+sudo apt-get install texlive
+sudo apt-get install texlive-fonts-recommended
+sudo apt-get install texlive-fonts-extra
+sudo apt-get install texlive-latex-extra
 ```
 
 # Editor: Visual Studio Code (VS Code)
