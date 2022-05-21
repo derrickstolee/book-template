@@ -8,7 +8,7 @@ WRITING=writing
 FIGURES=$(shell find $(WRITING) -name '*.svg')
 BODY=$(shell find $(WRITING)/chapters -name '[0-9][0-9]*.md' | sort -n)
 PREAMBLE=$(shell ls $(WRITING)/[0-9][0-9]*.md | sort -n)
-MARKDOWN=$(WRITING)/METADATA.yml $(PREAMBLE) $(BODY)
+MARKDOWN=$(WRITING)/METADATA.yml $(PREAMBLE) output/contributors.md $(BODY)
 
 PANDOCFLAGS =                                   \
   --table-of-contents                           \
@@ -39,6 +39,10 @@ open-pdf: output/book.pdf  $(DEPENDENCIES)
 
 output:
 	mkdir ./output
+
+output/contributors.md:
+	git shortlog -ns | sed "s/^[ ]* [0-9]*\t*//" | sed 's/$$/,/' >output/contributors.md
+	echo 'and all of you who submitted issues or review!' >>output/contributors.md
 
 clean: phony
 	rm -rf ./output
