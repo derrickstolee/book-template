@@ -40,7 +40,7 @@ open-pdf: output/book.pdf  $(DEPENDENCIES)
 output:
 	mkdir ./output
 
-output/contributors.md:
+output/contributors.md: output
 	git shortlog -ns | sed "s/^[ ]* [0-9]*\t*//" | sed 's/$$/,/' >output/contributors.md
 	echo 'and all of you who submitted issues or review!' >>output/contributors.md
 
