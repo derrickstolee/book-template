@@ -15,6 +15,7 @@ PANDOCFLAGS =                                   \
   --from=markdown                               \
   --number-sections                             \
   --highlight-style=monochrome                  \
+  --top-level-division=part			\
   -V mainfont="Palatino"                        \
   -V documentclass=report                       \
   -V papersize=letter                           \
