@@ -41,7 +41,7 @@ output:
 	mkdir ./output
 
 output/contributors.md: output
-	git shortlog -ns | sed "s/^[ ]* [0-9]*\t*//" | sed 's/$$/,/' >output/contributors.md
+	git shortlog -ns HEAD | sed "s/^[ ]* [0-9]*\t*//" | sed 's/$$/,/' >output/contributors.md
 	echo 'and all of you who submitted issues or review!' >>output/contributors.md
 
 clean: phony
